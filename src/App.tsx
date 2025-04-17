@@ -1,38 +1,69 @@
-import { About } from "./components/About";
-import { Cta } from "./components/Cta";
-import { FAQ } from "./components/FAQ";
-import { Features } from "./components/Features";
-import { Footer } from "./components/Footer";
-import { Hero } from "./components/Hero";
-import { HowItWorks } from "./components/HowItWorks";
+import { Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
-import { Newsletter } from "./components/Newsletter";
+import { HeroSection } from "./components/Hero";
+import { BenefitsSection } from "./components/BenefitsSection";
+import { DemoSection } from "./components/DemoSection";
 import { Pricing } from "./components/Pricing";
-import { ScrollToTop } from "./components/ScrollToTop";
-import { Services } from "./components/Services";
-import { Sponsors } from "./components/Sponsors";
-import { Team } from "./components/Team";
-import { Testimonials } from "./components/Testimonials";
+import { FAQSection } from "./components/FAQ";
+import { Newsletter } from "./components/Newsletter";
+import { ContactSection } from "./components/ContactSection";
+import { Footer } from "./components/Footer";
+import { FloatingWhatsAppCTA } from "./components/WhatsAppCTA";
+import AnimatedSection from "./components/AnimatedSection";
+import MerciPage from "./pages/MerciPage";
+import MentionsLegalesPage from "./pages/MentionsLegalesPage";
+import PolitiqueConfidentialitePage from "./pages/PolitiqueConfidentialitePage";
+import ConditionsGarantiePage from "./pages/ConditionsGarantiePage";
+import WhatsAppStatsPage from "./pages/admin/WhatsAppStats";
 import "./App.css";
+
+// HomePage component for the main landing page
+const HomePage = () => {
+  return (
+    <>
+      <AnimatedSection isFirst={true}>
+        <HeroSection />
+      </AnimatedSection>
+      <AnimatedSection delay={0.1}>
+        <BenefitsSection />
+      </AnimatedSection>
+      <AnimatedSection delay={0.2}>
+        <DemoSection />
+      </AnimatedSection>
+      <AnimatedSection delay={0.3}>
+        <Pricing />
+      </AnimatedSection>
+      <AnimatedSection delay={0.4}>
+        <FAQSection />
+      </AnimatedSection>
+      <AnimatedSection delay={0.5}>
+        <Newsletter />
+      </AnimatedSection>
+      <AnimatedSection delay={0.6}>
+        <ContactSection />
+      </AnimatedSection>
+    </>
+  );
+};
 
 function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Sponsors />
-      <About />
-      <HowItWorks />
-      <Features />
-      <Services />
-      <Cta />
-      <Testimonials />
-      <Team />
-      <Pricing />
-      <Newsletter />
-      <FAQ />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/merci" element={<MerciPage />} />
+        <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
+        <Route path="/politique-confidentialite" element={<PolitiqueConfidentialitePage />} />
+        <Route path="/conditions-garantie" element={<ConditionsGarantiePage />} />
+        <Route path="/admin/whatsapp-stats" element={<WhatsAppStatsPage />} />
+      </Routes>
       <Footer />
-      <ScrollToTop />
+      <FloatingWhatsAppCTA 
+        phoneNumber="33612345678"
+        message="Bonjour, je vous contacte depuis votre site web et j'aimerais en savoir plus sur vos solutions d'automatisation WhatsApp."
+        trackingId="floating_cta"
+      />
     </>
   );
 }

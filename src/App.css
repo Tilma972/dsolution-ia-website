@@ -2,71 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* *=========== Default theme =========== */
-/* @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-  }
-} */
-
 /* *=========== Green theme =========== */
 @layer base {
   :root {
@@ -113,13 +48,123 @@
     --input: 240 3.7% 15.9%;
     --ring: 142.4 71.8% 29.2%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* =========== Animations =========== */
+
+/* WhatsApp button pulsation and glow effect */
+@keyframes slow-pulse {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+}
+
+/* Mise à jour de l'animation pour qu'elle soit visible en mode sombre */
+@keyframes slow-pulse-dark {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); /* WhatsApp Green */
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); /* WhatsApp Green */
+  }
+}
+
+.animate-slow-pulse-glow {
+  animation: slow-pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  box-shadow: 0 0 15px 0 rgba(37, 211, 102, 0.5);
+  border-radius: 9999px; /* Ensure the glow effect is round */
+}
+
+/* Card hover effects - used across Benefits, Pricing, and Use Cases sections */
+.card-hover-effect {
+  transition: all 300ms ease-in-out;
+}
+
+.card-hover-effect:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+html.dark, html.dark body {
+  background-color: hsl(20 14.3% 4.1%);
+}
+
+/* Classe spécifique pour le mode sombre */
+.dark .animate-slow-pulse-glow {
+  animation-name: slow-pulse-dark; /* Use dark mode animation */
+  /* Override box-shadow for better contrast in dark mode */
+  box-shadow: 0 0 15px 0 rgba(37, 211, 102, 0.6); /* WhatsApp Green */
+  border-radius: 9999px; /* Ensure the glow effect is round in dark mode too */
+}
+
+/* HeroCards background shadow */
+.shadow {
+  position: absolute;
+  border-radius: 24px;
+  rotate: 35deg;
+  z-index: -1;
+  width: 260px;
+  top: 200px;
+  height: 400px;
+  filter: blur(150px);
+  will-change: transform;
+  animation: shadow-slide infinite 4s linear alternate;
+}
+
+/* Animation pour mode clair */
+@keyframes shadow-slide {
+  from {
+    background: hsl(var(--primary) / 20%);
+    right: 460px;
+  }
+  to {
+    background: hsl(var(--primary) / 80%);
+    right: 160px;
+  }
+}
+
+/* Version spécifique pour le mode sombre avec plus d'intensité */
+.dark .shadow {
+  animation: shadow-slide-dark infinite 4s linear alternate;
+}
+
+@keyframes shadow-slide-dark {
+  from {
+    background: hsl(var(--primary) / 30%);
+    right: 460px;
+  }
+  to {
+    background: hsl(var(--primary) / 90%);
+    right: 160px;
+  }
+}
+
+/* Adaptations responsives existantes */
+@media (max-width: 1024px) {
+  .shadow {
+    top: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .shadow {
+    top: 70px;
+    width: 100px;
+    height: 350px;
+    filter: blur(60px);
   }
 }
