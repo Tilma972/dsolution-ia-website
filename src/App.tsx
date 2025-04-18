@@ -24,22 +24,22 @@ const HomePage = () => {
       <AnimatedSection isFirst={true}>
         <HeroSection />
       </AnimatedSection>
-      <AnimatedSection delay={0.1}>
+      <AnimatedSection delay={0.05}>
         <BenefitsSection />
       </AnimatedSection>
-      <AnimatedSection delay={0.2}>
+      <AnimatedSection delay={0.1}>
         <DemoSection />
       </AnimatedSection>
-      <AnimatedSection delay={0.3}>
+      <AnimatedSection delay={0.15}>
         <Pricing />
       </AnimatedSection>
-      <AnimatedSection delay={0.4}>
+      <AnimatedSection delay={0.2}>
         <FAQSection />
       </AnimatedSection>
-      <AnimatedSection delay={0.5}>
+      <AnimatedSection delay={0.25}>
         <Newsletter />
       </AnimatedSection>
-      <AnimatedSection delay={0.6}>
+      <AnimatedSection delay={0.3}>
         <ContactSection />
       </AnimatedSection>
     </>
