@@ -13,9 +13,9 @@ interface AnimatedSectionProps extends HTMLMotionProps<"div"> {
 const AnimatedSection: React.FC<AnimatedSectionProps> = ({
   children,
   className,
-  delay = 0.2,
-  duration = 0.7,
-  yOffset = 70, // Increased slide-up distance for more noticeable animation
+  delay = 0.1,
+  duration = 0.5,
+  yOffset = 30, // Reduced slide-up distance for faster animation
   isFirst = false, // Not used but kept for compatibility
   ...rest // Pass any other div props
 }) => {
@@ -31,8 +31,8 @@ const AnimatedSection: React.FC<AnimatedSectionProps> = ({
       ref={ref}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.05 }} // Trigger animation when 5% is visible, run only once
-      transition={{ duration: duration, delay: delay, ease: "easeInOut" }}
+      viewport={{ once: true, amount: 0.01, margin: "100px 0px 0px 0px" }} // Trigger animation much earlier, run only once
+      transition={{ duration: duration, delay: delay, ease: "easeOut" }}
       variants={variants}
       className={className} // Apply any custom classes
       {...rest} // Spread the rest of the props
