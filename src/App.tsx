@@ -15,6 +15,7 @@ import MentionsLegalesPage from "./pages/MentionsLegalesPage";
 import PolitiqueConfidentialitePage from "./pages/PolitiqueConfidentialitePage";
 import ConditionsGarantiePage from "./pages/ConditionsGarantiePage";
 import WhatsAppStatsPage from "./pages/admin/WhatsAppStats";
+import { FAQPageSchema, ServiceSchema, LocalBusinessSchema } from './lib/schema';
 import "./App.css";
 
 // HomePage component for the main landing page
@@ -50,6 +51,9 @@ function App() {
   return (
     <>
       <Navbar />
+      <FAQPageSchema />
+      <ServiceSchema />
+      <LocalBusinessSchema />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/merci" element={<MerciPage />} />

@@ -9,7 +9,7 @@ export default function PolitiqueConfidentialitePage() {
     <>
       <Helmet>
         <title>Politique de Confidentialité - D-Solution IA</title>
-        <meta name="description" content="Politique de confidentialité et informations sur la protection des données de D-Solution IA" />
+        <meta name="description" content="Comment nous protégeons vos données personnelles. Informations complètes sur notre politique de confidentialité et la sécurité de vos informations." />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="mb-6">

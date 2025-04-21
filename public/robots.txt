@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dsolution-ia.com/sitemap.xml
+
+Disallow: /admin/
+Disallow: /admin/whatsapp-stats

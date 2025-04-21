@@ -148,7 +148,7 @@ export function Pricing() {
                     className="flex"
                   >
                     <Check className="text-green-500 shrink-0 mr-2" />{" "}
-                    <h3>{benefit}</h3>
+                    <span>{benefit}</span>
                   </span>
                 ))}
               </div>

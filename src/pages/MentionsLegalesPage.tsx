@@ -9,7 +9,7 @@ export default function MentionsLegalesPage() {
     <>
       <Helmet>
         <title>Mentions Légales - D-Solution IA</title>
-        <meta name="description" content="Mentions légales et informations juridiques de D-Solution IA" />
+        <meta name="description" content="Informations légales sur D-Solution IA, éditeur de solutions d'automatisation WhatsApp pour professionnels. Coordonnées, hébergement et droits de propriété." />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="mb-6">

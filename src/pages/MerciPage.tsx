@@ -1,7 +1,13 @@
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 export default function MerciPage() {
   return (
+    <>
+      <Helmet>
+        <title>Merci pour votre message - D-Solution IA</title>
+        <meta name="description" content="Votre demande a bien été reçue. Notre équipe vous répondra dans les plus brefs délais concernant nos solutions d'automatisation WhatsApp." />
+      </Helmet>
     <div className="bg-dark-bg min-h-screen flex items-center justify-center">
       <div className="container mx-auto px-4 py-16 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
@@ -18,5 +24,6 @@ export default function MerciPage() {
         </Link>
       </div>
     </div>
+    </>
   );
 }

@@ -9,7 +9,7 @@ export default function ConditionsGarantiePage() {
     <>
       <Helmet>
         <title>Conditions de Garantie - D-Solution IA</title>
-        <meta name="description" content="Conditions de garantie et informations sur notre engagement de satisfaction client chez D-Solution IA." />
+        <meta name="description" content="Nos conditions de garantie 'Satisfait ou Remboursé' sur le premier mois d'abonnement. Découvrez notre engagement qualité pour l'automatisation WhatsApp." />
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="mb-6">
