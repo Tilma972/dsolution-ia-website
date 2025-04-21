@@ -14,40 +14,44 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "Comment fonctionne l'automatisation via WhatsApp ?",
-    answer:
-      "Notre solution utilise l'API officielle de WhatsApp Business pour connecter un assistant intelligent à votre numéro professionnel. Cet assistant répond aux messages de vos clients 24h/24, qualifie leurs demandes et vous transmet uniquement les informations pertinentes.",
+    question: "Quelle est la différence entre D-Solution IA et un simple chatbot sur mon site web ?",
+    answer: "La différence principale est le canal : WhatsApp est plus direct, mobile, avec des taux de réponse bien plus élevés. De plus, notre solution va au-delà d'un chatbot basique en utilisant l'IA pour comprendre les demandes et automatiser des processus métiers complets (qualification, devis, suivi) via l'API officielle WhatsApp Business.",
     value: "item-1",
   },
   {
-    question: "Ai-je besoin de compétences techniques pour l'utiliser ?",
-    answer:
-      "Absolument pas. Notre équipe configure tout pour vous, et l'utilisation se fait directement via l'application WhatsApp que vous connaissez déjà. Pas de nouveau logiciel à apprendre, pas de formation complexe.",
+    question: "Dois-je changer mon numéro de téléphone pour utiliser ce service ?",
+    answer: "Oui, pour bénéficier de l'automatisation avancée via l'API WhatsApp Business officielle, un numéro de téléphone (fixe ou mobile) qui n'est pas déjà lié à un compte WhatsApp personnel ou Business App est nécessaire. Nous vous accompagnons entièrement pour choisir et configurer ce numéro lors du setup, c'est inclus dans nos frais de mise en place.",
     value: "item-2",
   },
   {
-    question: "Combien de temps pour mettre en place la solution ?",
-    answer:
-      "La mise en place prend entre 24h et 48h selon la complexité de votre activité. Nous configurons tous les scénarios de conversation adaptés à votre métier et personnalisons les réponses pour qu'elles correspondent parfaitement à votre identité.",
+    question: "Suis-je obligé d'avoir un site web ?",
+    answer: "Techniquement, non. Notre solution WhatsApp fonctionne indépendamment. Cependant, nous recommandons fortement d'avoir au moins une page web simple pour renforcer votre crédibilité et permettre à vos clients de trouver facilement comment démarrer une conversation WhatsApp avec vous (via QR code ou lien).",
     value: "item-3",
   },
   {
-    question: "Est-ce que mes clients sauront qu'ils parlent à un robot ?",
-    answer: 
-      "Nous sommes transparents avec vos clients. L'assistant se présente comme un assistant numérique, mais ses réponses sont si naturelles et pertinentes que l'expérience reste fluide. Pour les questions complexes, l'assistant sait quand vous transférer la conversation.",
+    question: "Comment mes clients entrent-ils en contact avec mon assistant WhatsApp ?",
+    answer: "C'est très simple ! Nous vous fournissons un QR Code unique et un lien direct `wa.me/...`. Vous pouvez les partager sur vos supports existants : site web, cartes de visite, flyers, email, réseaux sociaux, etc. Un scan ou un clic suffit pour démarrer la conversation.",
     value: "item-4",
   },
   {
-    question: "Puis-je personnaliser les réponses automatiques ?",
-    answer:
-      "Oui, toutes les réponses sont personnalisées selon votre activité, votre style de communication et vos besoins spécifiques. Vous pouvez demander des modifications à tout moment, et notre équipe les implémente sous 24h.",
+    question: "Les tarifs incluent-ils les coûts des messages WhatsApp ?",
+    answer: "Oui, nos plans Essentiel (500/mois) et Pro (1200/mois) incluent un volume défini de 'conversations' WhatsApp officielles (sessions de 24h). Cela couvre la majorité des besoins. Au-delà, un tarif transparent par conversation supplémentaire s'applique, conformément à la tarification de l'API WhatsApp Business.",
     value: "item-5",
   },
   {
-    question: "Comment mesurer le retour sur investissement ?",
-    answer:
-      "Vous recevez un tableau de bord mensuel qui montre le nombre de conversations gérées automatiquement, le temps gagné, le taux de conversion des demandes en clients, et d'autres métriques pertinentes pour votre activité.",
+    question: "Faut-il des compétences techniques pour utiliser D-Solution IA ?",
+    answer: "Absolument aucune. Nous nous occupons de toute la configuration technique. Pour vous, tout se passe via l'application WhatsApp que vous utilisez déjà au quotidien. C'est conçu pour être simple et intuitif.",
     value: "item-6",
+  },
+  {
+    question: "Combien de temps faut-il pour être opérationnel ?",
+    answer: "La mise en place est rapide. Après notre session de configuration accompagnée (environ 1 heure, incluse dans le setup), votre solution d'automatisation est prête à fonctionner immédiatement.",
+    value: "item-7",
+  },
+  {
+    question: "À quoi servent les frais de setup de 599€ ?",
+    answer: "Ces frais uniques couvrent l'audit initial de vos besoins, l'accompagnement complet pour obtenir et vérifier votre compte WhatsApp Business API officiel, la configuration personnalisée de vos scénarios d'automatisation et de l'IA dans nos systèmes, ainsi que votre formation initiale à l'utilisation.",
+    value: "item-8",
   },
 ];
 
