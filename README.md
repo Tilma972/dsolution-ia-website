@@ -1,59 +1,98 @@
-# Shadcn/UI Landing Page Template
+# D-Solution IA — Site vitrine
 
-## <a href="https://ui.shadcn.com/" target="_blank">ShadcnUI</a> + <a href="https://react.dev/" target="_blank">React</a> + <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a> + <a href="https://tailwindcss.com/" target="_blank">Tailwind</a>.
+Site web de **D-Solution IA**, une solution d'automatisation WhatsApp pensée pour les artisans, professionnels libéraux et TPE.
 
-![shadch-landing-page](https://github.com/leoMirandaa/shadcn-landing-page/assets/61714687/3ba7b51f-9589-4541-800a-5ab7cecad1b5)
+> Moins de tâches. Plus de clients. 100% via WhatsApp. Zéro logiciel compliqué.
 
-Build your React landing page effortlessly with the required sections to your project. <a href="https://shadcn-landing-page.vercel.app/" target="_blank">Live Demo</a>
+## Stack technique
 
-## Sections
+- [React 18](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/) — bundler ultra-rapide
+- [Tailwind CSS](https://tailwindcss.com/) — styles utilitaires
+- [Shadcn/UI](https://ui.shadcn.com/) — composants accessibles (Radix UI)
+- [Framer Motion](https://www.framer.com/motion/) — animations
+- [React Router v7](https://reactrouter.com/) — routing SPA
+- [Recharts](https://recharts.org/) — graphiques analytics
 
-- [x] Navbar
-- [x] Sidebar(mobile)
-- [x] Hero
-- [x] Sponsors
-- [x] About
-- [x] Stats
-- [x] How It Works
-- [x] Features
-- [x] Services
-- [x] Call-to-Action (CTA)
-- [x] Testimonials
-- [x] Team
-- [x] Pricing
+## Sections de la page d'accueil
+
+- [x] Navbar (desktop + mobile avec sidebar)
+- [x] Hero — accroche principale avec CTA WhatsApp
+- [x] Avantages (Benefits)
+- [x] Démonstration interactive du chatbot
+- [x] Tarifs (Pricing)
+- [x] FAQ
 - [x] Newsletter
-- [x] Frequently Asked Questions(FAQ)
+- [x] Contact
 - [x] Footer
 
-## Features
+## Pages
 
-- [x] Fully Responsive Design
-- [x] User Friendly Navigation
-- [x] Dark Mode
-- [x] Meta tags
+| Route | Description |
+|-------|-------------|
+| `/` | Page d'accueil |
+| `/merci` | Page de confirmation après contact |
+| `/mentions-legales` | Mentions légales |
+| `/politique-confidentialite` | Politique de confidentialité |
+| `/conditions-garantie` | Conditions de garantie |
+| `/admin/whatsapp-stats` | Dashboard analytics WhatsApp (admin) |
 
-## How to install
+## Fonctionnalités
 
-1. Clone this repository:
+- [x] Design entièrement responsive
+- [x] Mode sombre / clair
+- [x] CTA WhatsApp flottant avec tracking
+- [x] Analytics WhatsApp (suivi des clics par section)
+- [x] Animations au scroll (Framer Motion)
+- [x] Schémas SEO structurés (FAQ, Service, LocalBusiness)
+- [x] Sitemap & robots.txt
+
+## Installation
+
+1. Cloner le dépôt :
 
 ```bash
-git clone https://github.com/leoMirandaa/shadcn-landing-page.git
+git clone <url-du-repo>
+cd dsolution-ia-website
 ```
 
-2. Go into project
-
-```bash
-cd shadcn-landing-page
-```
-
-3. Install dependencies
+2. Installer les dépendances :
 
 ```bash
 npm install
 ```
 
-4. Run project
+3. Lancer le serveur de développement :
 
 ```bash
 npm run dev
 ```
+
+4. Construire pour la production :
+
+```bash
+npm run build
+```
+
+5. Prévisualiser le build :
+
+```bash
+npm run preview
+```
+
+## Scripts disponibles
+
+| Commande | Description |
+|----------|-------------|
+| `npm run dev` | Démarre le serveur de développement |
+| `npm run build` | Compile TypeScript + bundle pour la production |
+| `npm run preview` | Prévisualise le build de production |
+| `npm run lint` | Analyse statique ESLint |
+
+## Déploiement
+
+Le projet est configuré pour [Vercel](https://vercel.com/) (`vercel.json` inclus).
+
+## Licence
+
+MIT
